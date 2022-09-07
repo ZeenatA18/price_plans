@@ -1,0 +1,120 @@
+body{
+    /* background-image: url('g.jpg'); */
+    background-color: rgb(182, 232, 225);
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff80;
+        position: sticky;
+        top: 0;
+    }
+    
+    .navbar ul{
+        display: flex;
+        list-style: none;
+        margin: 20px 0px;
+    }
+    
+    .navbar ul li{
+        font-family: century;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+    
+    .navbar ul li a{
+        text-decoration: none;
+        color: rgb(15, 116, 96);
+        padding: 8px 25px;
+        transition: all .5s ease;
+    }
+    
+    .navbar ul li a:hover{
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 10px white;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .name{
+        color: black;
+        display: flex;
+        justify-content: center;
+        margin-top: 3em;
+    }
+    
+    .NameEntered{
+        margin: 1em;
+    }
+
+    .price_plan{
+        display: flex;
+        justify-content: center;
+        margin-top: 3em;
+    }
+
+
+    .btn{
+        text-align: center;
+        padding-top: 5em;
+    }
+
+    .space{
+        margin: 3em;
+        text-align: center;
+    }
+
+    .cal_name{
+        justify-content: center;
+        display: flex;
+        margin-left: 5.5em;
+    }
+
+    .namee{
+        margin: 1em;
+        margin-left: 17.7em;
+    }
+    
+    .usage{
+        margin: 1em;
+        margin-left: 16em;
+    }
+
+    .cal_usage{
+        justify-content: center;
+        display: flex;
+        margin-left: 5em;
+    }
+
+    .btn1{
+        text-align: center;
+        margin-top: 1em;
+        margin-left: 25.5em;
+    }
+
+    .total{
+        justify-content: center;
+        margin-top: 1em;
+        display: flex;
+        margin-left: 5em;
+    }
+
+    .total1{
+        margin-top: 1em;
+        margin-left: 12em;
+        width: 10em;
+        height: 2em;
+        background-color: gray;
+    }
+
+    .message1{
+        color: greenyellow;
+    }

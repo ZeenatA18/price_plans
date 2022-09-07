@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price_plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="content">
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/price_plans">Price plan</a></li>
+                <li><a href="/calc_bill">Phone Bill Total</a></li>
+            </ul>
+        </nav>
+        <form action="/" method="POST">
+            <h1>Phone Bill Price Plan</h1>
+
+
+            <div class="name">
+
+                <h3>Username:</h3>
+
+                <input type="text" name="user_name" class="NameEntered" value="" placeholder="Please Enter Name Here">
+            </div>
+
+            <div class="price_plan">
+                <h3>Price Plan: </h3>
+                <select name="list" class="NameEntered">
+                    <option value="">------Choose price plan------</option>
+                    <option value="sms" name="plan">sms100</option>
+                    <option value="call" name="plan">call100</option>
+                    <option value="text" name="plan">text-me</option>
+                </select>
+            </div>
+
+            <div class="flex">
+                <div class="btn">
+                    <button class="button" type="submit" name="" value="">Allocate</button>
+                </div>
+            </div>
+
+  <div class="message1">
+        {{#if messages}}
+        <h3> {{messages.error}}</h3>
+        {{/if}}
+    </div>
+
+    </div>
+</body>
+
+</html>
