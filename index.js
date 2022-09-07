@@ -56,11 +56,11 @@ app.get('/', function (req, res) {
 
 app.post('/',async function (req, res) {
     let name = req.body.user_name
-    
+
     let plan = req.body.plan
 
     if(name & plan){
-        req.flash('error', 'accepted')
+        req.flash('error', "accepted")
     }
 
     res.redirect('/')
