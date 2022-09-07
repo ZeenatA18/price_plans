@@ -59,7 +59,7 @@ app.post('/',async function (req, res) {
 
     let plan = req.body.plan
 
-    if(name & plan){
+    if(name && plan){
         req.flash('error', "accepted")
     }
 
