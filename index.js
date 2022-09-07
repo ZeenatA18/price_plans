@@ -11,7 +11,7 @@ const pgp = require('pg-promise')();
 
 let useSSL = false;
 let local = process.env.LOCAL || false;
-if (process.env.DATABASE_URL && !local) {
+if (process.env.DATABASE_URL && !local){
     useSSL = true;
 }
 
@@ -19,8 +19,8 @@ const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://plan:plan123@loca
 
 
 
-const config = {
-    connectionString: DATABASE_URL,
+const config = { 
+	connectionString : DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
@@ -54,37 +54,33 @@ app.get('/', function (req, res) {
     });
 })
 
-app.post('/', async function (req, res) {
-    // let name = req.body.user_name
-    // .charAt(0).toUpperCase() + req.body.text_name.slice(1).toLowerCase();
-    // let plan = req.body.plan
+app.post('/',async function (req, res) {
+    let name = req.body.user_name
+    
+    let plan = req.body.plan
 
-    // let names = await planning.getNames()
-    // res.render('actions', {
-    //     names: names
-    // })
+    if(name & plan){
+        req.flash('error', 'accepted')
+    }
+
+    res.redirect('/')
 })
 
 app.get('/calc_bill', function (req, res) {
 
     res.render('calc_bill', {
-
+        
     })
-
+   
 })
 
-app.get('/price_plans', async function (req, res) {
-
-    let username = req.params.naam
-    let counter = await planning.getSMSname(username);
-  
-
-    // console.log(output)
-
-    res.render('price_plan', {
-        counter
+app.get('/price_plans', function (req, res) {
+    
+    
+    res.render('price_plans', {
+        
     })
-
+    
 })
 
 
