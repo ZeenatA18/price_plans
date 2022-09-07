@@ -27,4 +27,11 @@ describe("Price Plans", function () {
 
     })
 
+    it("Should return error message if name is not entered and price plan is not selected", function () {
+        const plan = planny()
+
+        assert.equal("Please enter valid name and select price plan", plan.validateInputs("", ""));
+
+    })
+
 })
