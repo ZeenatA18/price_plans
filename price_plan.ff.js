@@ -33,11 +33,25 @@ module.exports = function price_plan(db) {
         return telly
     }
 
+    function validateInputs(name, plan) {
+        if (name === "" && !plan) {
+            return "Please enter valid name and select price plan"
+        }
+        else {
+            if (name === "") {
+                return "Please Enter name"
+            }
+            if (!plan) {
+                return "Please select plan"
+            }
+        }
+    }
     return {
         setUser,
         getSMSname,
         getUser,
-        namePlan
+        namePlan,
+        validateInputs
 
     }
 }

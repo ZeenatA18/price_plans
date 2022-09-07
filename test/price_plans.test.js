@@ -1,5 +1,5 @@
 const assert = require('assert');
-const greeting = require('../price_plan.ff');
+const planny = require('../price_plan.ff');
 const pgp = require('pg-promise')();
 
 const DATABASE_URL = process.env.DATABASE_URL || 'postgresql://plan:plan123@localhost:5432/price_plan';
@@ -10,8 +10,21 @@ const config = {
 
 const db = pgp(config);
 
-describe("Greet function", function () {
+describe("Price Plans", function () {
 
+   
+    it("Should return error message if price plan is not selected", function () {
+        const plan = planny()
 
+        assert.equal("Please select plan", plan.validateInputs("Joe", ""));
+
+    })
+
+    it("Should return error message if name is not entered", function () {
+        const plan = planny()
+
+        assert.equal("Please Enter name", plan.validateInputs("", "sms100"));
+
+    })
 
 })
